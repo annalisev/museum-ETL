@@ -99,3 +99,9 @@ A brief report explaining the graphs produced by graphs.py.
 A wireframe outlining a plan of how my dashboard will look, containing data obtained by running the files outlined above.
 
 ![alt text](Wireframe-Dashboard.png)
+
+## Snapshot Of Dashboard
+
+This Dashboard was made using Tableau using data from our constant stream. This is a snapshot after a day of running. The aim was to display some relevant information about the Liverpool Museum, that would also be relevant to stakeholders.
+
+![alt text](<Dashboard 1.png>)
