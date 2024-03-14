@@ -1,4 +1,4 @@
-
+'''Tests for consumer.py'''
 from consumer import check_messages, convert_time
 
 

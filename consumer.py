@@ -4,7 +4,6 @@ import argparse
 import logging
 import json
 from datetime import datetime, time
-from os import environ
 
 from dotenv import load_dotenv
 from confluent_kafka import Consumer
@@ -24,11 +23,11 @@ INVALID_TIME_MSG = 'INVALID: Interaction recorded while museum closed.'
 def get_db_connection() -> connection:
     """Returns a connection to the DB."""
     return connect(
-        dbname=environ.get("DB_NAME", "museum"),
-        user=environ.get("DB_USER", "postgres"),
-        password=environ.get("DB_PASSWORD"),
-        host=environ.get("DB_HOST"),
-        port=environ.get("DB_PORT", 5432),
+        dbname=ENV.get("DB_NAME", "museum"),
+        user=ENV.get("DB_USER", "postgres"),
+        password=ENV.get("DB_PASSWORD"),
+        host=ENV.get("DB_HOST"),
+        port=ENV.get("DB_PORT", 5432),
         cursor_factory=RealDictCursor
     )
 

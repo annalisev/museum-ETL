@@ -22,6 +22,10 @@ This diagram shows the logic and connections between the tables in the database.
 psql -U postgres -d postgres -h c10-annalise-museum.c57vkec7dkkx.eu-west-2.rds.amazonaws.com -f schema.sql
 
 
+#### To run schema.sql locally:
+
+psql postgres -f schema.sql
+
 ### consumer.py
 
 consumer.py is a file which consumers data from a constant source, cleans it and then loads it into the appropriate table in the museum database.
@@ -40,10 +44,14 @@ consumer.py requires the following in a .env file:
 - USERNAME
 - PASSWORD
 - GROUP
+- DB_NAME
+- DB_USER
+- DB_PASSWORD
+- DB_HOST
 
 #### To Run:
 
-Simply run python3 'consumer.py' in the terminal.
+Simply run 'python3 consumer.py' in the terminal.
 
 #### Optional Arguments
 
